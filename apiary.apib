@@ -13,21 +13,30 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
         [
             {
-                "question": "Favourite programming language?",
+                "menu": "Menu",
                 "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
+                "url": "/dishes",
+                "dishes": [
                     {
-                        "choice": "Swift",
-                        "votes": 2048
+                        "name": "Sweet & Sour Chicken",
+                        "description":,
+                        "price": 5.00,
+                        "id": 1
                     }, {
-                        "choice": "Python",
-                        "votes": 1024
+                        "name": "Sesame Chicken",
+                        "description":,
+                        "price": 5.50,
+                        "id": 2
                     }, {
-                        "choice": "Objective-C",
-                        "votes": 512
+                        "name": "Teriyaki Chicken",
+                        "description":,
+                        "price": 6.00,
+                        "id": 3
                     }, {
-                        "choice": "Ruby",
-                        "votes": 256
+                        "name": "Fried Rice",
+                        "description":,
+                        "price": 5.50,
+                        "id": 4
                     }
                 ]
             }
@@ -42,14 +51,39 @@ form of choices.
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+                "menu": "Menu",
+                "published_at": "2016-05-01T08:40:51.620Z",
+                "url": "/orders",
+                "orders": [
+                    {
+                        "username": "amanda",
+                        "ordered-items": [
+                            "Sweet & Sour Chicken",
+                            "Fried Rice"
+                        ],
+                        "time": "2016-05-01T08:40:51.620Z",
+                        "total": 10.50,
+                        "id": 1
+                    }, {
+                        "username": "hal",
+                        "ordered-items": [
+                            "Teriyaki Chicken",
+                            "Fried Rice"
+                        ],
+                        "time": "2016-05-01T08:40:51.620Z",
+                        "total": 11.50,
+                        "id": 2
+                    }, {
+                        "username": "kay",
+                        "ordered-items": [
+                            "Sesame Chicken",
+                        ],
+                        "time": "2016-05-01T08:40:51.620Z",
+                        "total": 5.50,
+                        "id": 3
+                    }
+                ]
+            }
 
 + Response 201 (application/json)
 
